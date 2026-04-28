@@ -1,1 +1,103 @@
-<p<hi</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Can Fix That</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0f0f0f;
+      --border: #242424;
+      --muted:  #505050;
+      --dim:    #888;
+      --text:   #ccc;
+      --bright: #efefea;
+      --accent: #c8f55a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .question {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.7rem;
+      color: var(--bright);
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .option {
+      display: block;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--dim);
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+
+    .option:hover {
+      border-color: var(--accent);
+      color: var(--bright);
+      background: rgba(200, 245, 90, 0.04);
+    }
+
+    .option .arrow {
+      color: var(--muted);
+      margin-right: 0.6rem;
+      transition: color 0.15s;
+    }
+
+    .option:hover .arrow { color: var(--accent); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="question">Your question here?</div>
+    <div class="options">
+      <a href="index.html" class="option">
+        <span class="arrow">→</span> Answer one (repair page)
+      </a>
+      <a href="https://google.com" class="option">
+        <span class="arrow">→</span> Answer two (external link)
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
