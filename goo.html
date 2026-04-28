@@ -37,6 +37,10 @@
     .card {
       width: 100%;
       max-width: 420px;
+    }
+
+    /* ── QUESTION STATE ── */
+    #question-view {
       animation: fadeUp 0.5s ease both;
     }
 
@@ -62,6 +66,10 @@
       text-decoration: none;
       font-size: 13px;
       color: var(--dim);
+      cursor: pointer;
+      background: none;
+      width: 100%;
+      text-align: left;
       transition: border-color 0.15s, color 0.15s, background 0.15s;
     }
 
@@ -79,25 +87,81 @@
 
     .option:hover .arrow { color: var(--accent); }
 
+    /* ── LEAVE STATE ── */
+    #leave-view {
+      display: none;
+      text-align: center;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    .leave-msg {
+      font-family: 'Instrument Serif', serif;
+      font-size: 2rem;
+      color: var(--bright);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .leave-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(12px); }
       to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; transform: translateY(0); }
+      to   { opacity: 0; transform: translateY(-8px); }
+    }
+
+    .fading-out {
+      animation: fadeOut 0.3s ease forwards;
     }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <div class="question">Your question here?</div>
-    <div class="options">
-      <a href="index.html" class="option">
-        <span class="arrow">→</span> Answer one (repair page)
-      </a>
-      <a href="https://google.com" class="option">
-        <span class="arrow">→</span> Answer two (external link)
-      </a>
+
+    <div id="question-view">
+      <div class="question">Do you want your phone fixed?</div>
+      <div class="options">
+        <a href="index.html" class="option">
+          <span class="arrow">→</span> Yes
+        </a>
+        <button class="option" onclick="handleNo()">
+          <span class="arrow">→</span> No
+        </button>
+      </div>
     </div>
+
+    <div id="leave-view">
+      <div class="leave-msg">Leave then</div>
+      <div class="leave-sub">Redirecting you...</div>
+    </div>
+
   </div>
+
+  <script>
+    function handleNo() {
+      const qv = document.getElementById('question-view');
+      const lv = document.getElementById('leave-view');
+
+      qv.classList.add('fading-out');
+      setTimeout(() => {
+        qv.style.display = 'none';
+        lv.style.display = 'block';
+      }, 300);
+
+      setTimeout(() => {
+        window.location.href = 'https://www.google.com';
+      }, 2000);
+    }
+  </script>
 
 </body>
 </html>
