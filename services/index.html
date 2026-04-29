@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Can Fix That</title>
+  <meta name="description" content="Computer and phone repair in Idaho Falls. One guy, honest work, fair prices." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0f0f0f;
+      --border: #242424;
+      --muted:  #505050;
+      --dim:    #888;
+      --text:   #ccc;
+      --bright: #efefea;
+      --accent: #c8f55a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      line-height: 1.75;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 5rem 2rem 6rem;
+    }
+
+    header { margin-bottom: 5rem; }
+
+    .site-name {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.6rem;
+      color: var(--bright);
+      margin-bottom: 0.4rem;
+    }
+
+    .site-name span { color: var(--accent); }
+
+    .site-tagline {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    section { margin-bottom: 4rem; }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p {
+      color: var(--dim);
+      font-size: 13px;
+      line-height: 1.85;
+      margin-bottom: 0.75rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    .service-list { list-style: none; }
+
+    .service-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .service-list li:first-child { border-top: 1px solid var(--border); }
+
+    .price-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    .contact-line {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 13px;
+      color: var(--dim);
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-line .label {
+      color: var(--muted);
+      min-width: 80px;
+    }
+
+    .contact-line a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .contact-line a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    footer {
+      margin-top: 5rem;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    header                 { animation: fadeUp 0.5s ease both; }
+    section:nth-of-type(1) { animation: fadeUp 0.5s 0.05s ease both; }
+    section:nth-of-type(2) { animation: fadeUp 0.5s 0.10s ease both; }
+    section:nth-of-type(3) { animation: fadeUp 0.5s 0.15s ease both; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="site-name">I Can Fix That<span>.</span></div>
+    <div class="site-tagline">Computer & phone repair — Idaho Falls, ID</div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>Hey, I'm Michael, a sophmore who fixes computers and phones on the side. Just bring me your device, I'll tell you what's wrong, what it'll cost, and price you out.</p>
+    <p>I've been doing this stuff in my free time, might as well get paid to do it. You'll get a straight answer and cheaper price.</p>
+  </section>
+
+  <section>
+    <h2>What I fix</h2>
+    <ul class="service-list">
+      <li>Cracked screens</li>
+      <li>Battery replacement</li>
+      <li>Charging port repair</li>
+      <li>Slow or broken laptop</li>
+      <li>Virus &amp; malware removal</li>
+      <li>OS reinstall &amp; setup</li>
+      <li>RAM &amp; storage upgrades</li>
+      <li>Data recovery</li>
+      <li>General diagnostics</li>
+    </ul>
+    <p class="price-note">Pricing varies by device and repair — just reach out and I'll give you a quote.</p>
+  </section>
+
+  <section>
+    <h2>Get in touch</h2>
+    <div class="contact-line">
+      <span class="label">Email</span>
+      <a href="mailto:hello@icanfixthat.site">hello@icanfixthat.site</a>
+    </div>
+    <div class="contact-line">
+      <span class="label">Availability</span>
+      <span>Weekends, some weekdays — just reach out</span>
+    </div>
+    <div class="contact-line">
+      <span class="label">Location</span>
+      <span>Idaho Falls, ID (meet local)</span>
+    </div>
+  </section>
+
+  <footer>icanfixthat.site &nbsp;·&nbsp; Idaho Falls, ID</footer>
+
+</body>
+</html>
