@@ -68,7 +68,27 @@
       line-height: 1.85;
       margin-bottom: 0.75rem;
     }
+    
+    .sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+    }
 
+    .sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+    }
+    
     p:last-child { margin-bottom: 0; }
 
     .service-list { list-style: none; }
@@ -112,8 +132,8 @@
     .contact-line a:hover {
       color: var(--accent);
       border-color: var(--accent);
-    }
-
+    } 
+    
     footer {
       margin-top: 5rem;
       font-size: 11px;
