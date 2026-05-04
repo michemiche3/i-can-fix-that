@@ -1,3 +1,136 @@
-<body><h3>Error 404: Unknown page requested</h3>
-  <p>I'm sorry, but the site you had requested does not exist. Did you misspell the page in the URL?</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Can Fix That</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0f0f0f;
+      --border: #242424;
+      --muted:  #505050;
+      --dim:    #888;
+      --text:   #ccc;
+      --bright: #efefea;
+      --accent: #c8f55a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    /* ── QUESTION STATE ── */
+    #question-view {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .question {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.7rem;
+      color: var(--bright);
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .option {
+      display: block;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--dim);
+      cursor: pointer;
+      background: none;
+      width: 100%;
+      text-align: left;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+
+    .option:hover {
+      border-color: var(--accent);
+      color: var(--bright);
+      background: rgba(200, 245, 90, 0.04);
+    }
+
+    .option .arrow {
+      color: var(--muted);
+      margin-right: 0.6rem;
+      transition: color 0.15s;
+    }
+
+    .option:hover .arrow { color: var(--accent); }
+
+    /* ── LEAVE STATE ── */
+    #leave-view {
+      display: none;
+      text-align: center;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    .leave-msg {
+      font-family: 'Instrument Serif', serif;
+      font-size: 2rem;
+      color: var(--bright);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .leave-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; transform: translateY(0); }
+      to   { opacity: 0; transform: translateY(-8px); }
+    }
+
+    .fading-out {
+      animation: fadeOut 0.3s ease forwards;
+    }
+  </style>
+</head>
+<body>
+
+<div>  <h3>404: Page at requested URL does not exist</h3>
+</div>
+  <div>
+    <p>The page you requested does not exist. did you spell the URL incorrectly?</p>
+    <p>Try looking for your page by heading to the <a href="https://icanfixthat.site/sitemap.html">sitemap</a> to see the exact pages you can go to!</p>
+  </div>
+
 </body>
+</html>
