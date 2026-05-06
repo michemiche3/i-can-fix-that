@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,6 +49,67 @@
       font-size: 13px;
       color: var(--muted);
     }
+
+    .trustpilot-reviews {
+  width: 100%;
+  padding: 1rem 0;
+  background: #f3f3f3;
+  text-align: center;
+
+  .trust-icons {
+    margin: 0;
+  }
+
+  .stars {
+    display: inline-block;
+    list-style: none;
+    margin-top: 0 !important;
+    padding-left: 0 !important;
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 0.25em !important;
+      width: 28px;
+      height: 28px;
+      background: #00b67a;
+      text-align: center;
+
+      path {
+        transform: scale(0.32);
+      }
+    }
+  }
+
+  .score {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #6b6b6b;
+
+    span {
+      width: 100%;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      color: #000;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .score {
+      .stars {
+        width: auto !important;
+      }
+      span {
+        margin-right: 0.5em;
+        display: inline-block;
+      }
+    }
+  }
+}
 
     section { margin-bottom: 4rem; }
 
@@ -142,14 +204,39 @@
   <section>
     <h2>Reviews</h2>
     <p>This page is being brewed right now... Come back when i've had more repair jobs!</p>
-
-    <p>but, expect positive reviews. :P</p>
+    <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="69fb79b3de41ef308bc655cc" data-style-height="52px" data-style-width="100%" data-token="6f699de5-10cf-4e63-9557-2e1b313867a0">
+      <a href="https://www.trustpilot.com/review/icanfixthat.site" target="_blank" rel="noopener">Trustpilot</a>
+    </div>
   </section>
 
   <section>
     <h2>My Reviews</h2>
-    <p class="price-note">insert TrustPilot review board embed here, haven't set it up yet bcuz of my shitty wifi</p>
   </section>
+  <section class="trustpilot-reviews">
+		<div class="container">
+			<div class="score">
+				<span>Excellent</span>
+				<ul class="stars">
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"><path d="M39.9 53.9L52 50.7l5.1 15.7-17.2-12.5zm27.9-20.3H46.4l-6.6-20.3-6.6 20.3H11.8l17.3 12.6-6.6 20.3L39.8 54l10.7-7.8 17.3-12.6z" fill="#fff"/></svg>
+					</li>
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"><path d="M39.9 53.9L52 50.7l5.1 15.7-17.2-12.5zm27.9-20.3H46.4l-6.6-20.3-6.6 20.3H11.8l17.3 12.6-6.6 20.3L39.8 54l10.7-7.8 17.3-12.6z" fill="#fff"/></svg>
+					</li>
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"><path d="M39.9 53.9L52 50.7l5.1 15.7-17.2-12.5zm27.9-20.3H46.4l-6.6-20.3-6.6 20.3H11.8l17.3 12.6-6.6 20.3L39.8 54l10.7-7.8 17.3-12.6z" fill="#fff"/></svg>
+					</li>
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"><path d="M39.9 53.9L52 50.7l5.1 15.7-17.2-12.5zm27.9-20.3H46.4l-6.6-20.3-6.6 20.3H11.8l17.3 12.6-6.6 20.3L39.8 54l10.7-7.8 17.3-12.6z" fill="#fff"/></svg>
+					</li>
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"><path d="M39.9 53.9L52 50.7l5.1 15.7-17.2-12.5zm27.9-20.3H46.4l-6.6-20.3-6.6 20.3H11.8l17.3 12.6-6.6 20.3L39.8 54l10.7-7.8 17.3-12.6z" fill="#fff"/></svg>
+					</li>
+				</ul>
+			</div>
+			<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="506bac8800006400051c8dd3" data-style-height="25px" data-style-width="100%" data-theme="light" style="font-size: 1.1em;"> <a href="https://www.trustpilot.com/review/myimeiunlock.com" target="_blank" rel="noopener">Trustpilot</a> </div>
+		</div>
+	</section>
 
   <footer>icanfixthat.site &nbsp;·&nbsp; Idaho Falls, ID</footer>
 
